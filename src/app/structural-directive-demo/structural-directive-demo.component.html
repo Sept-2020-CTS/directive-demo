@@ -1,0 +1,28 @@
+<div>
+    <p>ngFor loop & ngIf demo</p>
+    <ul>
+        <li *ngFor="let product of products">
+            <div *ngIf="checkProductId(product.productId); else elseBlock" >
+
+                {{product.productId}} is listed as {{product.productName}}
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<ng-template #elseBlock>Its an odd Product!! Why do you want it??</ng-template>
+
+<hr>
+
+<div>
+    <p>ngSwitch Demo</p>
+    <div *ngFor="let product of products">
+        <div [ngSwitch] = "product.productId">
+            <p *ngSwitchCase="1">This is the {{product.productId}}st Product - {{product.productName}}</p>
+            <p *ngSwitchCase="2">This is the {{product.productId}}nd Product - {{product.productName}}</p>
+            <p *ngSwitchCase="3">This is the {{product.productId}}rd Product - {{product.productName}}</p>
+            <p *ngSwitchDefault>This is the {{product.productId}}th Product - {{product.productName}}</p>
+        </div>
+    </div>
+</div>

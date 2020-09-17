@@ -1,0 +1,12 @@
+.darkTheme{
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
+
+.lightTheme{
+    background-color: yellow;
+    color: blue;
+    margin: 20px;
+    
+}
